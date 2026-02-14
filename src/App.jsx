@@ -5,6 +5,7 @@ import Experience from './app/components/Experience'
 import Services from './app/components/Services'
 import Contact from './app/components/Contact'
 import Footer from './app/components/Footer'
+import WhatsAppButton from './app/components/WhatsAppButton'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

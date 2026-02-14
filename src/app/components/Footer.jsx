@@ -1,4 +1,4 @@
-import { Brain, Heart, Mail, Sparkles, Star } from 'lucide-react'
+import { Brain, Heart, Mail, Sparkles, Star, Instagram, Phone } from 'lucide-react'
 
 export default function Footer() {
     return (
@@ -52,6 +52,13 @@ export default function Footer() {
                             <li className="flex items-center gap-3 text-purple-200">
                                 <Mail className="w-5 h-5 text-pink-400" />
 
+                            </li>
+                            <li className="flex items-center gap-3 text-purple-200">
+                                <Phone className="w-5 h-5 text-pink-400" />
+                            </li>
+                            <li className='flex items-center gap-3 text-purple-200'>
+                                <Instagram className="w-5 h-5 text-pink-400" />
+                                <a className="text-purple-200 hover:text-white hover:translate-x-2 transition-transform inline-block" href="https://www.instagram.com/psicopensar.m/" target="_blank">psicopensar.m</a>
                             </li>
                             <li className="flex items-center gap-3 text-purple-200">
                                 <div className="px-2 py-1 bg-white/10 rounded text-xs font-bold">Lunes a Viernes</div>

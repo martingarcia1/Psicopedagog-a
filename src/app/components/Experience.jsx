@@ -3,6 +3,15 @@ import { Briefcase, Award, GraduationCap, Heart, Sparkles } from 'lucide-react'
 export default function Experience() {
     const experiences = [
         {
+            role: "Graduada en Psicopedagogía",
+            place: "Instituto Santo Domingo",
+            period: "2022 - 2025",
+            icon: <GraduationCap className="w-5 h-5 text-white" />,
+            color: "bg-purple-500",
+            emoji: "🎓",
+            link: "https://sime.educaciontuc.gov.ar:8077/Constancias/ConsultaConstancia?c=20251222-150532963"
+        },
+        {
             role: "Maestra Integradora",
             place: "Institución Educativa",
             period: "2 Años",
@@ -22,9 +31,9 @@ export default function Experience() {
             role: "Espec. Estimulación Temprana",
             place: "Certificación",
             period: "Completado",
-            icon: <GraduationCap className="w-5 h-5 text-white" />,
+            icon: <Sparkles className="w-5 h-5 text-white" />,
             color: "bg-purple-500",
-            emoji: "🎓"
+            emoji: "✨"
         },
         {
             role: "Estudiante",
@@ -67,6 +76,21 @@ export default function Experience() {
                             </div>
 
                             <div className={`absolute bottom-0 left-0 w-full h-1 ${exp.color.replace('bg-', 'bg-gradient-to-r from-white via-')} to-white opacity-50`} />
+                            {exp.link && (
+                                <a
+                                    href={exp.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="absolute bottom-4 right-4 text-gray-400 hover:text-purple-600 transition-colors"
+                                    aria-label="Ver enlace"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            )}
                         </div>
                     ))}
                 </div>
