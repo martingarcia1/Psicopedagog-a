@@ -1,0 +1,94 @@
+@theme {
+    --font-outfit: 'Outfit', sans-serif;
+
+    --color-purple-500: #a855f7;
+    --color-pink-500: #ec4899;
+    --color-yellow-500: #eab308;
+    --color-orange-400: #fb923c;
+    --color-blue-500: #3b82f6;
+    --color-green-500: #10b981;
+    --color-beige: #f5e6d3;
+
+    --animate-float: float 3s ease-in-out infinite;
+    --animate-wiggle: wiggle 1s ease-in-out infinite;
+    --animate-spin-slow: spin-slow 8s linear infinite;
+    --animate-scale-pulse: scale-pulse 2s ease-in-out infinite;
+    --animate-bounce-rotate: bounce-rotate 2s infinite;
+    --animate-swing: swing 2s ease-in-out infinite;
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes wiggle {
+
+        0%,
+        100% {
+            transform: rotate(-3deg);
+        }
+
+        50% {
+            transform: rotate(3deg);
+        }
+    }
+
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes scale-pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    @keyframes bounce-rotate {
+
+        0%,
+        100% {
+            transform: translateY(0) rotate(0);
+        }
+
+        50% {
+            transform: translateY(-10px) rotate(5deg);
+        }
+    }
+
+    @keyframes swing {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(5deg);
+        }
+
+        75% {
+            transform: rotate(-5deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}
