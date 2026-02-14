@@ -1,6 +1,6 @@
 import { Heart, Star, Sparkles, Quote } from 'lucide-react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
-import psicope from '../../assets/psicope.jpg'
+import psicope from '../../assets/Psicope.jpg'
 
 export default function About() {
     const cards = [
