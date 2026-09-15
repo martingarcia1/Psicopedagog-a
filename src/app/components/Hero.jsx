@@ -1,83 +1,91 @@
-import { ArrowRight, Star, Heart, Sparkles, BookOpen } from 'lucide-react'
-import { ImageWithFallback } from './figma/ImageWithFallback'
+import { ArrowRight, Heart, BookOpen, CalendarCheck, Sparkles } from 'lucide-react'
+import HeroCarousel from './HeroCarousel'
+
+const phoneNumber = "5493813040994"
+const message = "Hola, me gustaría consultar por un turno."
+const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
 export default function Hero() {
     return (
-        <section id="home" className="relative min-h-screen pt-20 flex items-center overflow-hidden bg-gradient-to-b from-purple-50 to-white">
+        <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center overflow-hidden bg-gradient-to-b from-purple-50 to-white">
             {/* Background Decor */}
             <div className="absolute inset-0 school-pattern-1 opacity-30" />
-            <div className="absolute top-20 left-10 animate-float delay-100 text-4xl">✏️</div>
-            <div className="absolute bottom-20 right-10 animate-float delay-700 text-4xl">🎨</div>
-            <div className="absolute top-1/2 right-20 animate-wiggle text-4xl">📚</div>
+            <div className="absolute -top-24 -left-24 w-96 h-96 bg-purple-200/50 rounded-full blur-3xl" />
+            <div className="absolute -bottom-32 -right-24 w-[28rem] h-[28rem] bg-pink-200/50 rounded-full blur-3xl" />
+            <div className="absolute top-32 left-6 animate-float delay-100 text-4xl hidden md:block">✏️</div>
+            <div className="absolute bottom-16 right-8 animate-float delay-700 text-4xl hidden md:block">🎨</div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-6">
-                        <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md text-purple-600 font-semibold animate-fade-in-up">
-                            <Sparkles className="w-5 h-5 text-yellow-500" />
-                            <span>Psicopedagoga</span>
-                        </div>
+                <div className="relative">
 
-                        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-gray-800">
-                            Creando puentes para el <span className="text-purple-600 underline decoration-wavy decoration-yellow-400">aprendizaje</span>
+                    {/* Tarjeta principal con la foto */}
+                    <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl h-[460px] md:h-[600px] bg-gradient-to-r from-purple-200 via-purple-100 to-[#e9e7e6]">
+                        {/* Carrusel con fundido entre imágenes */}
+                        <HeroCarousel />
+                        {/* Fundido del borde izquierdo de la foto con el fondo */}
+                        <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-purple-100 via-purple-100/60 to-transparent hidden md:block pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-purple-900/30 via-transparent to-transparent pointer-events-none" />
+
+                        {/* Botón de agendar sobre la imagen */}
+                        <a
+                            href={whatsappUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="absolute left-5 bottom-5 md:bottom-auto md:left-8 md:top-[22rem] inline-flex items-center gap-2 px-6 py-3 bg-white text-purple-700 rounded-full font-bold shadow-xl hover:bg-purple-600 hover:text-white transition-all hover:scale-105"
+                        >
+                            <CalendarCheck className="w-5 h-5" />
+                            Agendar turno
+                            <ArrowRight className="w-5 h-5" />
+                        </a>
+                    </div>
+
+                    {/* Bloque de título, recortado sobre la esquina superior izquierda */}
+                    {/* cursiva   */}
+                    <div className="absolute -top-px -left-px max-w-[92%] md:max-w-2xl bg-purple-50 rounded-br-[2.5rem] pr-6 md:pr-12 pb-5 md:pb-8 ">
+                        <div className="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full shadow-md text-purple-600 text-sm font-semibold mb-4">
+                            <Sparkles className="w-4 h-4 text-yellow-500" />
+                            <span>M.P. 845</span>
+                        </div>
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-gray-800 italic" style={{ fontFamily: "'Cedarville Cursive', cursive" }}>
+                            Melina Gorostiaga
                         </h1>
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight text-purple-600 italic" style={{ fontFamily: "'Edu NSW ACT Cursive', cursive" }}>
+                            Psicopedagoga
+                        </h2>
+                    </div>
 
-                        <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                            Acompaño procesos de aprendizaje con amor, paciencia y estrategias personalizadas para cada niño y niña.
+                    {/* Tarjeta chica arriba a la derecha */}
+                    <div className="absolute top-4 right-4 md:top-6 md:right-6 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-4 py-3 md:px-5 md:py-4 max-w-[200px] hidden sm:block">
+                        <p className="text-sm font-bold text-gray-800 leading-snug">
+                            Turnos disponibles
                         </p>
-
-                        <div className="flex flex-wrap gap-4">
-                            <a href="#contact" className="px-8 py-3 bg-purple-600 text-white rounded-full font-bold shadow-lg hover:bg-purple-700 transition-transform hover:scale-105 flex items-center gap-2">
-                                Agendar Cita <ArrowRight className="w-5 h-5" />
-                            </a>
-                            <a href="#about" className="px-8 py-3 bg-white text-purple-600 border-2 border-purple-100 rounded-full font-bold hover:border-purple-300 transition-colors">
-                                Conocer más
-                            </a>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-4 pt-4">
-                            <div className="bg-white p-4 rounded-xl shadow-school border-l-4 border-purple-500 flex items-center gap-3">
-                                <div className="p-2 bg-purple-100 rounded-lg">
-                                    <BookOpen className="w-6 h-6 text-purple-600" />
-                                </div>
-                                <div>
-                                    <p className="font-bold text-2xl text-gray-800">4+</p>
-                                    <p className="text-xs text-gray-500">Años de formación</p>
-                                </div>
-                            </div>
-                            <div className="bg-white p-4 rounded-xl shadow-school border-l-4 border-pink-500 flex items-center gap-3">
-                                <div className="p-2 bg-pink-100 rounded-lg">
-                                    <Heart className="w-6 h-6 text-pink-500" />
-                                </div>
-                                <div>
-                                    <p className="font-bold text-2xl text-gray-800">2+</p>
-                                    <p className="text-xs text-gray-500">Años de experiencia</p>
-                                </div>
-                            </div>
+                        <p className="text-xs text-gray-500 mb-2">
+                            para niños, niñas y adolescentes
+                        </p>
+                        <div className="flex items-center gap-1.5">
+                            <span className="w-7 h-7 rounded-full bg-yellow-100 flex items-center justify-center text-sm">🧒</span>
+                            <span className="w-7 h-7 rounded-full bg-pink-100 flex items-center justify-center text-sm">👧</span>
+                            <span className="w-7 h-7 rounded-full bg-purple-100 flex items-center justify-center text-sm">🧑</span>
                         </div>
                     </div>
 
-                    <div className="relative">
-                        <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
-                            <ImageWithFallback
-                                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022"
-                                alt="Learning"
-                                className="rounded-3xl border-8 border-white shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 w-full object-cover h-[500px]"
-                            />
-                            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl animate-bounce-slow hidden md:block">
-                                <div className="flex items-center gap-2">
-                                    <div className="bg-yellow-100 p-2 rounded-full">
-                                        <Star className="w-6 h-6 text-yellow-500 fill-yellow-500" />
-                                    </div>
-                                    <div>
-                                        <p className="font-bold text-gray-800">Enfoque Lúdico</p>
-                                        <p className="text-xs text-gray-500">Aprender jugando</p>
-                                    </div>
-                                </div>
+                    {/* Píldoras con datos sobre el borde inferior */}
+                    <div className="mt-4 md:mt-0 md:absolute md:-bottom-6 md:right-8 flex flex-wrap justify-center md:justify-end gap-3">
+                        <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full shadow-lg">
+                            <div className="p-1.5 bg-purple-100 rounded-full">
+                                <BookOpen className="w-4 h-4 text-purple-600" />
                             </div>
+                            <span className="text-sm font-semibold text-gray-700">4+ años de formación</span>
                         </div>
-                        {/* Decorative blob behind */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-purple-200 to-pink-200 rounded-full blur-3xl -z-10 opacity-60" />
+                        <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full shadow-lg">
+                            <div className="p-1.5 bg-pink-100 rounded-full">
+                                <Heart className="w-4 h-4 text-pink-500" />
+                            </div>
+                            <span className="text-sm font-semibold text-gray-700">2+ años de experiencia</span>
+                        </div>
+                        <a href="#about" className="flex items-center gap-2 bg-purple-600 text-white px-5 py-2.5 rounded-full shadow-lg font-semibold text-sm hover:bg-purple-700 transition-colors">
+                            Conocer más <ArrowRight className="w-4 h-4" />
+                        </a>
                     </div>
                 </div>
             </div>
