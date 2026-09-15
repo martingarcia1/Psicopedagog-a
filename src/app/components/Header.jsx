@@ -35,9 +35,9 @@ export default function Header() {
                         <div className="p-2 bg-purple-100 rounded-full group-hover:scale-110 transition-transform">
                             <Brain className="w-6 h-6 text-purple-600 animate-pulse" />
                         </div>
-                        <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                        {/* <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
                             PsicoPedagogía
-                        </span>
+                        </span> */}
                     </a>
 
                     {/* Desktop Navigation */}

@@ -13,7 +13,7 @@ export default function Footer() {
                             <div className="bg-white/10 p-2 rounded-full backdrop-blur-sm">
                                 <Brain className="w-6 h-6 text-pink-300" />
                             </div>
-                            <h3 className="text-2xl font-bold">PsicoPedagogía</h3>
+                            <h3 className="text-2xl font-bold"></h3>
                         </div>
                         <p className="text-purple-200 max-w-xs leading-relaxed">
                             Acompañando el aprendizaje con amor, compromiso y profesionalismo.

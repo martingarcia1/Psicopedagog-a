@@ -41,21 +41,21 @@ export default function Hero() {
 
                     {/* Bloque de título, recortado sobre la esquina superior izquierda */}
                     {/* cursiva   */}
-                    <div className="absolute -top-px -left-px max-w-[92%] md:max-w-2xl bg-purple-50 rounded-br-[2.5rem] pr-6 md:pr-12 pb-5 md:pb-8 ">
+                    <div className="absolute -top-px -left-px max-w-[92%] md:max-w-2xl bg-purple-50 rounded-br-[2.5rem] pr-6 md:pr-2 pb-4 md:pb-4 ">
                         <div className="inline-flex items-center gap-2 bg-white px-4 py-1.5 rounded-full shadow-md text-purple-600 text-sm font-semibold mb-4">
-                            <Sparkles className="w-4 h-4 text-yellow-500" />
+                            <Sparkles className="w-2 h-2 text-yellow-500" />
                             <span>M.P. 845</span>
                         </div>
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-gray-800 italic" style={{ fontFamily: "'Cedarville Cursive', cursive" }}>
+                        <h1 className="text-3xl sm:text-4xl md:text-2xl font-bold leading-tight text-gray-800 italic" style={{ fontFamily: "'Edu NSW ACT Cursive', cursive" }}>
                             Melina Gorostiaga
                         </h1>
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight text-purple-600 italic" style={{ fontFamily: "'Edu NSW ACT Cursive', cursive" }}>
+                        <h2 className="text-2xl sm:text-3xl md:text-3xl font-bold leading-tight text-purple-600 italic" style={{ fontFamily: "'Cedarville Cursive', cursive" }}>
                             Psicopedagoga
                         </h2>
                     </div>
 
                     {/* Tarjeta chica arriba a la derecha */}
-                    <div className="absolute top-4 right-4 md:top-6 md:right-6 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-4 py-3 md:px-5 md:py-4 max-w-[200px] hidden sm:block">
+                    {/* <div className="absolute top-4 right-4 md:top-6 md:right-6 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl px-4 py-3 md:px-5 md:py-4 max-w-[200px] hidden sm:block">
                         <p className="text-sm font-bold text-gray-800 leading-snug">
                             Turnos disponibles
                         </p>
@@ -67,10 +67,10 @@ export default function Hero() {
                             <span className="w-7 h-7 rounded-full bg-pink-100 flex items-center justify-center text-sm">👧</span>
                             <span className="w-7 h-7 rounded-full bg-purple-100 flex items-center justify-center text-sm">🧑</span>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Píldoras con datos sobre el borde inferior */}
-                    <div className="mt-4 md:mt-0 md:absolute md:-bottom-6 md:right-8 flex flex-wrap justify-center md:justify-end gap-3">
+                    {/* <div className="mt-4 md:mt-0 md:absolute md:-bottom-6 md:right-8 flex flex-wrap justify-center md:justify-end gap-3">
                         <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-full shadow-lg">
                             <div className="p-1.5 bg-purple-100 rounded-full">
                                 <BookOpen className="w-4 h-4 text-purple-600" />
@@ -86,7 +86,7 @@ export default function Hero() {
                         <a href="#about" className="flex items-center gap-2 bg-purple-600 text-white px-5 py-2.5 rounded-full shadow-lg font-semibold text-sm hover:bg-purple-700 transition-colors">
                             Conocer más <ArrowRight className="w-4 h-4" />
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
