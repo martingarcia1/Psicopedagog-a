@@ -21,9 +21,25 @@ export default function Experience() {
             emoji: ""
         },
         {
-            role: "Prácticas Profesionales",
+            role: "Consultorio Privado",
+            place: "Equipo Terapeutico Alma- Fortunata G 2798",
+            period: "Actualmente",
+            icon: <Briefcase className="w-5 h-5 text-white" />,
+            color: "bg-blue-500",
+            emoji: ""
+        },
+        {
+            role: "Docente de Apoyo en Sala",
+            place: "Acompañar SRL",
+            period: "2024-2025",
+            icon: <Briefcase className="w-5 h-5 text-white" />,
+            color: "bg-blue-500",
+            emoji: ""
+        },
+        {
+            role: "Prácticas Profesionalizantes",
             place: "DCI-Casa de Hermanos",
-            period: "1 Año",
+            period: "2025",
             icon: <Heart className="w-5 h-5 text-white" />,
             color: "bg-pink-500",
             emoji: "🏠"
@@ -37,7 +53,15 @@ export default function Experience() {
             emoji: "✨"
         },
         {
-            role: "Estudiante",
+            role: "Curso PPI- Proyecto Pedagogico Individual",
+            place: "Certificación",
+            period: "Completado",
+            icon: <Sparkles className="w-5 h-5 text-white" />,
+            color: "bg-purple-500",
+            emoji: "✨"
+        },
+        {
+            role: "Maestra Nivel 2",
             place: "LAPEN Argentina",
             period: "Completado",
             icon: <Award className="w-5 h-5 text-white" />,
