@@ -1,6 +1,5 @@
 import { ArrowRight, Heart, BookOpen, CalendarCheck, Sparkles } from 'lucide-react'
 import HeroCarousel from './HeroCarousel'
-
 const phoneNumber = "5493813040994"
 const message = "Hola, me gustaría consultar por un turno."
 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
@@ -17,7 +16,6 @@ export default function Hero() {
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="relative">
-
                     {/* Tarjeta principal con la foto */}
                     <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl h-[460px] md:h-[600px] bg-gradient-to-r from-purple-200 via-purple-100 to-[#e9e7e6]">
                         {/* Carrusel con fundido entre imágenes */}

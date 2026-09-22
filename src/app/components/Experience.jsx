@@ -1,4 +1,5 @@
 import { Briefcase, Award, GraduationCap, Heart, Sparkles } from 'lucide-react'
+import titulo from '../../assets/titulo_educativo_27451843120.pdf'
 
 export default function Experience() {
     const experiences = [
@@ -9,19 +10,19 @@ export default function Experience() {
             icon: <GraduationCap className="w-5 h-5 text-white" />,
             color: "bg-purple-500",
             emoji: "🎓",
-            link: "https://sime.educaciontuc.gov.ar:8077/Constancias/ConsultaConstancia?c=20251222-150532963"
+            pdf: titulo
         },
         {
-            role: "Maestra Integradora",
-            place: "Institución Educativa",
-            period: "2 Años",
+            role: "Psicopedagoga",
+            place: "Inst. LK",
+            period: "Actualmente",
             icon: <Briefcase className="w-5 h-5 text-white" />,
             color: "bg-blue-500",
-            emoji: "👩🏫"
+            emoji: ""
         },
         {
             role: "Prácticas Profesionales",
-            place: "Casa de h",
+            place: "DCI-Casa de Hermanos",
             period: "1 Año",
             icon: <Heart className="w-5 h-5 text-white" />,
             color: "bg-pink-500",
@@ -76,9 +77,9 @@ export default function Experience() {
                             </div>
 
                             <div className={`absolute bottom-0 left-0 w-full h-1 ${exp.color.replace('bg-', 'bg-gradient-to-r from-white via-')} to-white opacity-50`} />
-                            {exp.link && (
+                            {exp.pdf && (
                                 <a
-                                    href={exp.link}
+                                    href={exp.pdf}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="absolute bottom-4 right-4 text-gray-400 hover:text-purple-600 transition-colors"

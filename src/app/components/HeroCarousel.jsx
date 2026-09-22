@@ -2,13 +2,21 @@ import { useEffect, useState } from 'react'
 import { cn } from '../../lib/utils'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import psicope from '../../assets/Psicope.jpg'
+import image1 from '../../assets/carru1.jpeg'
+import image2 from '../../assets/carru2.jpeg'
+import image3 from '../../assets/carru3.jpeg'
+import image4 from '../../assets/carru4.jpeg'
 
-// Imágenes del carrusel. Reemplazá las de Unsplash por fotos propias
-// importándolas desde src/assets como se hace con Psicope.jpg.
+
+// Imágenes del carrusel. Para agregar una foto: importala desde src/assets
+// (como image1 más abajo) y sumala a este arreglo. `position` define qué
+// parte de la foto queda centrada cuando se recorta para llenar el marco.
 const slides = [
-    { src: psicope, alt: 'Melina Gorostiaga, psicopedagoga' },
-    { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1600', alt: 'Niños aprendiendo en el aula' },
-    { src: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=1600', alt: 'Materiales didácticos y juegos' },
+    { src: psicope, alt: 'Melina Gorostiaga, psicopedagoga', position: 'object-[50%_18%]' },
+    { src: image4, alt: 'Sala de estimulación y juego', position: 'object-[50%_40%]' },
+    { src: image1, alt: 'Espacio de trabajo para las sesiones', position: 'object-[50%_35%]' },
+    { src: image2, alt: 'Actividad de dibujo en sesión', position: 'object-[50%_30%]' },
+    { src: image3, alt: 'Juego de cartas en una sesión', position: 'object-[50%_35%]' },
 ]
 
 const INTERVAL_MS = 4500
@@ -38,7 +46,8 @@ export default function HeroCarousel({ className }) {
                     src={slide.src}
                     alt={slide.alt}
                     className={cn(
-                        'absolute inset-0 w-full h-full object-cover object-top md:object-contain md:object-right transition-opacity ease-in-out',
+                        'absolute inset-0 w-full h-full object-cover transition-opacity ease-in-out',
+                        slide.position || 'object-center',
                         i === current ? 'opacity-100' : 'opacity-0'
                     )}
                     style={{ transitionDuration: `${FADE_MS}ms` }}
