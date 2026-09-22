@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
-const email = [EMAIL_ADDRESS]
 
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
-        email,
+        email: 'gorostiagameli.03@gmail.com',
         phone: '3813040994',
         message: ''
     })
@@ -55,7 +54,7 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <p className="text-sm text-gray-500 font-bold">Email</p>
-                                        <p className="text-gray-700">[EMAIL_ADDRESS]</p>
+                                        <p className="text-gray-700"> gorostiagameli.03@gmail.com</p>
                                     </div>
                                 </div>
 
